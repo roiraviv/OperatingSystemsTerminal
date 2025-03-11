@@ -1,8 +1,11 @@
-/* myShell.c */
+
 #include "myShell.h"
 #include "myFunctionsShell.h"
 
-int main(int argc, char *argv[]) {
+int main(int argc, char const *argv[]) {
+    
     welcome();
+
     return 0;
 }
+

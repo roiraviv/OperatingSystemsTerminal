@@ -1,17 +1,16 @@
-/* makefile */
-CC=gcc
-CFLAGS=-Wall -Wextra -std=c99
+CC = gcc
+Flags = -Wall -g
 
 all: myShell
 
 myShell: myShell.o myFunctionsShell.o
-	$(CC) $(CFLAGS) -o myShell myShell.o myFunctionsShell.o
+	$(CC) $(Flags) -o myShell myShell.o myFunctionsShell.o
 
-myShell.o: myShell.c myShell.h myFunctionsShell.h
-	$(CC) $(CFLAGS) -c myShell.c
+myShell.o: myShell.c myShell.h
+	$(CC) $(Flags) -c myShell.c
 
 myFunctionsShell.o: myFunctionsShell.c myFunctionsShell.h
-	$(CC) $(CFLAGS) -c myFunctionsShell.c
+	$(CC) $(Flags) -c myFunctionsShell.c
 
 clean:
-	rm -f myShell myShell.o myFunctionsShell.o
+	rm -f *.o myShell
